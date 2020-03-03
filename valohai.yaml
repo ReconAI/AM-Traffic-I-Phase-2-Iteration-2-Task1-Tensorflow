@@ -16,7 +16,7 @@
         pass-as: --val_steps={v}
         description: Number of steps to run the val
         type: integer
-        default: 70
+        default: 64
       - name: learning_rate
         pass-as: --learning_rate={v}
         description: Initial learning rate
