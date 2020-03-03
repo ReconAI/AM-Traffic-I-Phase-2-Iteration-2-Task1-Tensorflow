@@ -6,7 +6,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ModelCheckpoint
 from keras.optimizers import Adam
 import os
-
+from PIL import Image, ImageFile
 #--------------------------------------Building the model--------------------------------------
 num_classes = 7 # number of classes
 
@@ -45,7 +45,7 @@ validation_generator = data_generator_no_aug.flow_from_directory(
         '/valohai/inputs/dataset/dataset/val',
         target_size=(image_size, image_size),
         class_mode='categorical')
-
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 #--------------------------------------Training and saving the model--------------------------------------
 model_name='WeatherCondi'
 
