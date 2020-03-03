@@ -51,7 +51,7 @@ model_name='WeatherCondi'
 
 # we save the best model (with maximum validation accuracy)
 checkpointer = ModelCheckpoint(
-    filepath=os.path.join('valohai/outputs', model_name + '.h5'),
+    filepath=os.path.join('/valohai/outputs', model_name + '.h5'),
     monitor='val_acc', verbose=1, save_best_only=True, mode='max', period=1)
 
 
