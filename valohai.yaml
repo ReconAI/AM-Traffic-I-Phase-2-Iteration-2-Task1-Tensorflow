@@ -6,7 +6,7 @@
     command: 
       - unzip /valohai/inputs/dataset/dataset.zip -d /valohai/inputs/dataset
       - pip install --disable-pip-version-check --quiet -r requirements.txt
-      - python3 train.py
+      - python3 train.py {parameters}
     parameters:
       - name: image_size
         pass-as: --image_size={v}
