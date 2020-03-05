@@ -1,7 +1,7 @@
 import os
-from PIL import Image, ImageFile
 import json
 import argparse
+from PIL import Image, ImageFile
 from keras.callbacks import LambdaCallback
 import tensorflow as tf
 from keras.models import Model, Sequential, load_model
@@ -47,7 +47,7 @@ def parse_args():
 flags = parse_args()
 
 num_classes = 7 # number of classes
-epochs = 5
+epochs = 1
 
 model = Sequential()
 resNet = ResNet50(include_top=False, pooling='avg', weights='imagenet') # pretrained model
@@ -102,12 +102,10 @@ json_logging_callback = LambdaCallback(
             on_epoch_end=lambda epoch, logs: print(json.dumps({
                 'epoch': int(epoch) + 1,
                 'loss': str(logs['loss']),
-                'accuracy': str(logs['accuracy']),
+                'accuracy': str(logs['acc']),
                 'val_loss': str(logs['val_loss']),
                 'val_accuracy': str(logs['val_acc']),
             })),
-            # Add occasional batch logging so we can quickly see it is progressing.
-            on_batch_begin=lambda batch, logs: (print('Batch %s' % batch) if batch % 100 == 0 else None),
         )
 
 
