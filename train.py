@@ -47,7 +47,7 @@ validation_generator = data_generator_no_aug.flow_from_directory(
         class_mode='categorical')
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 #--------------------------------------Training and saving the model--------------------------------------
-model_name='WeatherCondi'
+model_name='WeatherCondi-{val_acc:.2f}'
 
 # we save the best model (with maximum validation accuracy)
 checkpointer = ModelCheckpoint(
