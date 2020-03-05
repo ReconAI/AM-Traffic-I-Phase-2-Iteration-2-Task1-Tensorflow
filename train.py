@@ -48,7 +48,7 @@ resNet = ResNet50(include_top=False, pooling='avg', weights='imagenet') # pretra
 # froze layers in resnet
 if flags.layers_fine_tune:
   layers_fine_tune = -flags.layers_fine_tune
-  for layer in [:layers_fine_tune]: 
+  for layer in resNet.layers[:layers_fine_tune]: 
     layer.trainable = False
 for layer in resNet.layers:
 	layer.trainable = False
