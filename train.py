@@ -47,7 +47,7 @@ def parse_args():
 flags = parse_args()
 
 num_classes = 7 # number of classes
-epochs = 1
+epochs = 20
 
 model = Sequential()
 resNet = ResNet50(include_top=False, pooling='avg', weights='imagenet') # pretrained model
