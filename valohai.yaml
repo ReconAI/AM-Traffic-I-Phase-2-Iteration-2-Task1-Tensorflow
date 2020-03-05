@@ -17,7 +17,7 @@
         pass-as: --layers_fine_tune={v}
         description: Layers to be unfrozen
         type: integer
-        default: None
+        default: 0
       - name: learning_rate
         pass-as: --learning_rate={v}
         description: Initial learning rate
