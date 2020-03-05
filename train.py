@@ -52,7 +52,7 @@ if flags.layers_fine_tune != 0:
         layer.trainable = False
 else:
     for layer in resNet.layers:
-	   layer.trainable = False
+	layer.trainable = False
 model.add(resNet) 
 model.add(Dense(num_classes, activation='softmax')) # Classification layer
 
