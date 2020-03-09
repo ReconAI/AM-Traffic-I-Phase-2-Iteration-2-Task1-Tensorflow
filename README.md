@@ -10,7 +10,8 @@ Network should be light enough to run in realtime on a Jetson Nano device.
 
 # Data
 The data was collected during task4. As described in task4, the images were downloaded in AWS S3 bucket and the labels are included in the images’s names whose format is as follows:<br/>
- *'camera-id'\_r'roadConditionCategory'\_w'weatherConditionCategory'\_'measuredTime'* eg. "C1255201_r7_w0_2020-01-29_21-00-39"<br/>
+ *'camera-id'\_r'roadConditionCategory'\_w'weatherConditionCategory'\_'measuredTime'*
+ eg. "C1255201_r7_w0_2020-01-29_21-00-39"<br/>
  The weather conditions to classify are:<br/>
  1. Clear (0)
  2. Raining, three scales:
