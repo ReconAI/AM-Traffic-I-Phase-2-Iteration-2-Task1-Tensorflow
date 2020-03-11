@@ -37,3 +37,16 @@ The best validation accuracy I got is **0.97** with training accuracy of **0.97*
 This model was obtained with learning rate equal to *0.001*, batch size of *64* sample, image with *(224x224)* size and no layer fine tuned.
 # Testing the model (predict.py)
 To test the performance of the model we run the model on images not included in training and validation datasets.
+## Prediction on images
+You can predict on images using *predict_images_tf.py* script:
+```sh
+python3 predict_images_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./input --output ./output_weather --labels ./weather_labels.json
+```
+Where you mention on **'prediction'** argument that you want to predict weather conditions and put the path of the training model on **'model'** argument. The **'input'** argument is the path of your input images and the **'output'** is the path of the output images. As for **'labels'** argument you put the path of *'weather_labels.json'* file
+
+## Prediction on video
+You can predict on video using *predict_video_tf.py* script:
+```sh
+python3 predict_video_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./test_video.mp4 --labels ./weather_labels.json --output ./output/weather_conditions.avi --size 1
+```
+Where you mention on **'prediction'** argument that you want to predict weather conditions and put the path of the training model on **'model'** argument. The **'input'** argument is the path of your input video and the **'output'** is the path of the output video. As for **'labels'** argument you put the path of *'weather_labels.json'* file
