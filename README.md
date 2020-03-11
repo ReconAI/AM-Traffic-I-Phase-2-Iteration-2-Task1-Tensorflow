@@ -40,10 +40,12 @@ Plot of train/validation accuracy per epoch.
 <p align="center">
   <img src="figures/task1_acc_train_val.png">
 </p>
+
 Plot of train/validation loss per epoch.
 <p align="center">
   <img src="figures/task1_loss_train_val.png">
 </p>
+
 # Testing the model (predict.py)
 To test the performance of the model we run the model on images not included in training and validation datasets.
 ## Prediction on images
