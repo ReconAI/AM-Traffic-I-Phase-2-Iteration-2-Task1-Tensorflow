@@ -63,7 +63,7 @@ Where:
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
 ```sh
-python3 predict_video_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./test_video.mp4 --labels ./weather_labels.json --output ./output/weather_conditions.avi --size 128
+python3 predict_video_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./test_video.mp4 --labels ./weather_labels.json --output ./output/weather_conditions.avi --size 1
 ```
 Where:
 * **'predictions'**: weather (conditions to predict).
