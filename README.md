@@ -42,11 +42,21 @@ You can predict on images using *predict_images_tf.py* script:
 ```sh
 python3 predict_images_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./input --output ./output_weather --labels ./weather_labels.json
 ```
-Where you mention on **'prediction'** argument that you want to predict weather conditions and put the path of the training model on **'model'** argument. The **'input'** argument is the path of your input images and the **'output'** is the path of the output images. As for **'labels'** argument you put the path of *'weather_labels.json'* file
+Where:
+* **'prediction'** argument: weather (conditions to predict)
+* **'model'** argument: the path of the training model.
+* **'input'** argument: the path of your input images.
+* **'output'** argument: the path of the output images.
+* **'labels'** argument you put the path of *'weather_labels.json'* file
 
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
 ```sh
 python3 predict_video_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./test_video.mp4 --labels ./weather_labels.json --output ./output/weather_conditions.avi --size 1
 ```
-Where you mention on **'prediction'** argument that you want to predict weather conditions and put the path of the training model on **'model'** argument. The **'input'** argument is the path of your input video and the **'output'** is the path of the output video. As for **'labels'** argument you put the path of *'weather_labels.json'* file
+Where:
+* **'prediction'** argument: weather (conditions to predict)
+* **'model'** argument: the path of the training model.
+* **'input'** argument: the path of your input images.
+* **'output'** argument: the path of the output images.
+* **'labels'** argument you put the path of *'weather_labels.json'* file
