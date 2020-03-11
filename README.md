@@ -43,11 +43,11 @@ You can predict on images using *predict_images_tf.py* script:
 python3 predict_images_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./input --output ./output_weather --labels ./weather_labels.json
 ```
 Where:
-* **'predictions'** argument: weather (conditions to predict).
-* **'model'** argument: the path of the training model.
-* **'input'** argument: the path of your input images.
-* **'output'** argument: the path of the output images.
-* **'labels'** argument: the path of labels json file.
+* **'predictions'**: weather (conditions to predict).
+* **'model'**: the path of the training model.
+* **'input'**: the path of your input images.
+* **'output'**: the path of the output images.
+* **'labels'**: the path of labels json file.
 
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
@@ -55,9 +55,9 @@ You can predict on video using *predict_video_tf.py* script:
 python3 predict_video_tf.py --predictions weather --model ./models/tensorflow/WeatherCondi.h5 --input ./test_video.mp4 --labels ./weather_labels.json --output ./output/weather_conditions.avi --size 128
 ```
 Where:
-* **'predictions'** argument: weather (conditions to predict).
-* **'model'** argument: the path of the training model.
-* **'input'** argument: the path of your input vdeo (you have to mention the input video name).
-* **'output'** argument: the path of the output video (you have to mention the output video name).
-* **'labels'** argument: the path of labels json file.
-* **'size'** argument: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
+* **'predictions'**: weather (conditions to predict).
+* **'model'**: the path of the training model.
+* **'input'**: the path of your input vdeo (you have to mention the input video name).
+* **'output'**: the path of the output video (you have to mention the output video name).
+* **'labels'**: the path of labels json file.
+* **'size'**: size of queue for averaging (128 by default). Set the size to 1 if you  don't want to perform any averaging.
