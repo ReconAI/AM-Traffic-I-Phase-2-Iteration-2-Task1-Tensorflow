@@ -59,6 +59,22 @@ Where:
 * **'input'**: the path of your input images.
 * **'output'**: the path of the output images.
 * **'labels'**: the path of labels json file.
+### Results
+The predictions are displayed on images as follows:
+
+<p align="center">
+  <img src="figures/C0353602_r3_w4_2020-02-10_08-08-40.jpg">
+</p>
+
+<p align="center">
+  <img src="figures/C0355401_r3_w4_2020-02-10_08-09-02.jpg">
+</p>
+
+Predictions metrics calculated on the test dataset:
+
+<p align="center">
+  <img src="figures/class_report_weather_tf.png">
+</p>
 
 ## Prediction on video
 You can predict on video using *predict_video_tf.py* script:
