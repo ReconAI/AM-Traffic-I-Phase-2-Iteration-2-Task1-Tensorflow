@@ -4,7 +4,7 @@ import argparse
 from PIL import Image, ImageFile
 from keras.callbacks import LambdaCallback
 import tensorflow as tf
-from keras.models import Model, Sequential
+from keras.models import Sequential
 from keras.layers import Dense
 from keras.applications.resnet import ResNet50, preprocess_input
 from keras.preprocessing.image import ImageDataGenerator
