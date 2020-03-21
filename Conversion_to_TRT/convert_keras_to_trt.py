@@ -1,4 +1,4 @@
-# python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/RoadCondi.h5 --output_node dense_1/Softmax
+# python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/WeatherCondi.h5 --output_node dense_1/Softmax
 
 
 # import the needed libraries
