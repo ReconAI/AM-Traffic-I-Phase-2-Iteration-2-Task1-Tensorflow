@@ -14,7 +14,7 @@ tf.keras.backend.set_learning_phase(0) #use this if we have batch norm layer in 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-t", "--trt_path", required=True,
-	help=" path we want save our converted models")
+	help=" path where to save our converted models")
 ap.add_argument("-m", "--model", required=True,
 	help="path to trained serialized keras model")
 ap.add_argument("-o", "--output_node", required=True,
