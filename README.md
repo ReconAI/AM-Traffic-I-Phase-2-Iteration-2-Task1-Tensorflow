@@ -97,10 +97,10 @@ Conversion of the built Keras model to TensorRT model.
 ## Conversion
 Use the script *convert_keras_to_trt.py* as follows:
 ```sh
-python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/RoadCondi.h5 --output_node dense_1/Softmax
+python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/WeatherCondi.h5 --output_node dense_1/Softmax
 ```
 Where:
-* ***trt_path**: path where to save the converted models.
+* **trt_path**: path where to save the converted models.
 * **model**: path to trained serialized keras model.
 * **output_node**:  name of the output node (*dense_1/Softmax* in our case).
 
