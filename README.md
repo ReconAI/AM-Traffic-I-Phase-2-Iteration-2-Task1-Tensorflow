@@ -112,15 +112,42 @@ Where:
 * **output_node**:  name of the output node (*dense_1/Softmax* in our case).
 
 After running this script successfully, in trt_path you will have:
-*checkpoints, tf_model.meta, frozen_model.pb and tensorrt_model.pb.* 
-## Converted TensorRT models
-This [link](https://drive.google.com/open?id=1Ontame0VWgJU-z0oYC1g2JEcahYkJk1W) contains TRT weights:
-1. unzip the zip file.
-2. choose the appropriate TRT weights that you will use.
+*checkpoints, tf_model.meta, frozen_model.pb and tensorrt_model.pb.
 
-PS:
-* **w_** refers to weather classification.
-* **r_** refers to road classification.
-* **pt_** means that this model was trained using 'Pytorch'.
-* **tf_** means that this model was trained using 'Tensorflow'.
-* **16** and **32** refer to 'Foating Point Precision' type.
+# Inference on Jetson Nano
+After converting the models to TensorRT we can make inferences on Jetson Nano following these instructions:
+1- Setup Jetson Nano:
+```sh
+sudo apt update
+sudo apt install python3-pip libhdf5-serial-dev hdf5-tools
+pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow-gpu==1.15.0+nv20.1
+pip3 install pillow
+```
+2- Download zip file that contains TRT weights from [here](https://drive.google.com/open?id=1Ontame0VWgJU-z0oYC1g2JEcahYkJk1W).
+3- Unzip the zip file.
+2- Choose the appropriate TRT weights that you will use and upload it on Jetson Nano.
+   PS:
+   * **w_** refers to weather classification.
+   * **r_** refers to road classification.
+   * **pt_** means that this model was trained using 'Pytorch'.
+   * **tf_** means that this model was trained using 'Tensorflow'.
+   * **16** and **32** refer to 'Foating Point Precision' type.
+3- Choose an image you want to predict and upload it on the same directory as the model and the prediction script **predict_trt.py**.
+4- From the folder where fils are uploaded execute:
+   ```sh
+   python3 predict_trt --input_node resnet50_input --output_node dense_1/Softmax --path r_tf_32_tensorrt.pb --img_path img0.jpg --labels weather_labels.json --shape_size 224 --time true
+   ```
+   
+   Where:
+     * **'input_node'**: name of the input node.
+     * **'output_node'**: name of the output node.
+     * **'path'**: path to the trt model.
+     * **'img_path'**: path to the image we want to predict.
+     * **'labels'**: the path of labels json file.
+     * **'shape_size'**: input shape (height).
+     * **'shape_size'**: set it to True if you want to compute the execution time and fps.
+     
+   ## Results
+   For model with Foating Point Precision equal to 32 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.59 to 6.28.
+   
+   For model with Foating Point Precision equal to 16 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.88 to 6.25.
