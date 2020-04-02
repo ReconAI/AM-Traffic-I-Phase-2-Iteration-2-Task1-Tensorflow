@@ -126,6 +126,7 @@ pip3 install pillow
 2. Download zip file that contains TRT weights from [here](https://drive.google.com/open?id=1Ontame0VWgJU-z0oYC1g2JEcahYkJk1W).
 3. Unzip the zip file.
 4. Choose the appropriate TRT weights that you will use and upload it on Jetson Nano.
+
    PS:
    * **w_** refers to weather classification.
    * **r_** refers to road classification.
@@ -133,7 +134,7 @@ pip3 install pillow
    * **tf_** means that this model was trained using 'Tensorflow'.
    * **16** and **32** refer to 'Foating Point Precision' type.
 5. Choose an image you want to predict and upload it on the same directory as the model and the prediction script **predict_trt.py**.
-6. From the folder where fils are uploaded execute:
+6. From the folder where files are uploaded execute:
    ```sh
    python3 predict_trt --input_node resnet50_input --output_node dense_1/Softmax --path r_tf_32_tensorrt.pb --img_path img0.jpg --labels weather_labels.json --shape_size 224 --time true
    ```
@@ -148,6 +149,6 @@ pip3 install pillow
      * **'shape_size'**: set it to True if you want to compute the execution time and fps.
      
    ## Results
-   For model with Foating Point Precision equal to 32 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.59 to 6.28.
+   For model with 'Foating Point Precision' equal to 32 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.59 to 6.28.
    
-   For model with Foating Point Precision equal to 16 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.88 to 6.25.
+   For model with 'Foating Point Precision' equal to 16 the **average(sec/frame)** varies from 0.16 to 0.17 and the **fps** varies from 5.88 to 6.25.
