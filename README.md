@@ -6,6 +6,8 @@ As an input this model should take a video sequence from CCTV camera; As an outp
 
 Network should be light enough to run in realtime on a Jetson Nano device.
 
+Detailed description can be found in **page2** in *'AM-Traffic I. Phase 2. Iteration 2 task4.pdf'* file.
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 # Data
