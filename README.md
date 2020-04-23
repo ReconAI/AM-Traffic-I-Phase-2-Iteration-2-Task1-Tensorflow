@@ -120,6 +120,9 @@ Conversion of the built Keras model to TensorRT model.
 * tensorflow-gpu~=1.15.0
 * Keras~=2.2.5
 * argparse~=1.4.0
+```sh
+python3.6 -m pip install -r trt_requirements.txt
+```
 ## Conversion
 Use the script *convert_keras_to_trt.py* as follows:
 ```sh
