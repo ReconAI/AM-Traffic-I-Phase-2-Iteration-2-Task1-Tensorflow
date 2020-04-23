@@ -117,7 +117,7 @@ Where:
 # Conversion to TensorRT
 Conversion of the built Keras model to TensorRT model.
 ## Requirement
-* tensorflow-gp~=1.15.0
+* tensorflow-gpu~=1.15.0
 * Keras~=2.2.5
 * argparse~=1.4.0
 ## Conversion
