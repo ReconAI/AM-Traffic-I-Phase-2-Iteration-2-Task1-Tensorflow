@@ -1,3 +1,0 @@
-tensorflow-gp~=1.15.0
-Keras~=2.2.5
-argparse~=1.4.0
