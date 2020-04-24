@@ -124,7 +124,9 @@ Conversion of the built Keras model to TensorRT model.
 python3.6 -m pip install -r trt_requirements.txt
 ```
 ## Conversion
-Use the script *convert_keras_to_trt.py* as follows:
+1. Download Model weights from [here](https://drive.google.com/open?id=1LcW1wH_Pq99LD4IPMqow0DjVVFk-lPwn) and put it in the **models** folder in the root folder.
+2. In the **models** folder create the directory **keras_trt** where to place the converted model.
+3. From the root folder execute:
 ```sh
 python3 convert_keras_to_trt.py --trt_path ./models/keras_trt --model ./models/tensorflow/WeatherCondi.h5 --output_node dense_1/Softmax
 ```
