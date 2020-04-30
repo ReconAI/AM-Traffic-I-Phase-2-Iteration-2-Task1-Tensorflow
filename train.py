@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Training the tensorflow model.
+"""
+
 import argparse
 import os
 import json
