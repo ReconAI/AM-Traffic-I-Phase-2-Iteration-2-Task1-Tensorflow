@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Prediction using the trt model on the
+Jetson Nano and fps computation.
+"""
+
 from __future__ import print_function
 import argparse
 import json
