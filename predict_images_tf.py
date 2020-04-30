@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Predict images using tensorflow model.
+"""
+
 # import the necessary packages
 from __future__ import print_function
 import argparse
